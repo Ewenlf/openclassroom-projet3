@@ -1,13 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JC DECAUX: Location de Vélo</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>YO</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet 3 : Location de vélo à  Nancy</title>
+    
+    <!-- Ajout de la carte -->
+    <link
+          rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""
+    />
+    <script
+          src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+          integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+          crossorigin=""
+    ></script>
+    
+    <!--Font Awesome-->
+    <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    
+    <!--Feuille de style-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  
+  <body>
+    <header>
+      <div class="slider">
+        <img
+             class="active"
+					   src="https://images.unsplash.com/photo-1559467713-f830ec30e3e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+        />
+        <img
+             src="https://images.unsplash.com/photo-1590634875887-a6a516622e2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
+        />
+        <img
+             src="https://images.unsplash.com/photo-1590664216212-62e763768cae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+        />
+        <i class="fa fa-chevron-circle-left"></i>
+        <i class="fa fa-pause-circle-o pause"></i>
+        <i class="fa fa-play-circle-o play"></i>
+        <i class="fa fa-chevron-circle-right"></i>
+      </div>
+    </header>
+    
+    <section>
+      <div id="map"></div>
+      <form id="formulaire">
+        <p class="text-formulaire" id="adresse"></p>
+        <p class="text-formulaire" id="adresse"></p>
+        <p class="text-formulaire" id="adresse"></p>
+        
+        <div class="name text-formulaire">
+          <label for="lastname">Nom:
+            <input
+                   type="text"
+                   name="lastname"
+                   id="lastname"
+                   required
+            />
+          </label>
+          
+          <label for="firstname">
+            <input
+                   type="text"
+                   name="firstname"
+                   id="firstname"
+                   required
+            />
+          </label>
+          
+          <div class="text-formulaire bouton-reservation">
+            <input id="reserver" type="submit" value="Réserver" />
+            <div class="canvas">
+              <canvas id="signature"></canvas>
+              <button id="effacer">Effacer</button>
+              <button id="valider">Valider</button>
+          </div>
+        </div>
+      </form>
+    </section>
+      
+    <script src="script.js"></script>
+  </body>
+  
 </html>
+  
